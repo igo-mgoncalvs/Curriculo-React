@@ -1,0 +1,22 @@
+@import "/src/styles/variaveis";
+
+.sobreMim{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $fundoPrincipal;
+    width: 50vw;
+    height: 100vh;
+
+    &__box{
+        width: 25rem;
+
+        & p, h1 {
+            margin-top: 10px;
+        }
+
+        &__funcao{
+            font-weight: bold;
+        }
+    }
+}
