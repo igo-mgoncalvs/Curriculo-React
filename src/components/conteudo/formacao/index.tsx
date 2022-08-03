@@ -2,6 +2,8 @@ import styles from './formacao.module.scss'
 import conhecimentos from './conhecimentos.json'
 
 export default function Formacao () {
+    const imgURL = 'https://raw.githubusercontent.com/igo-mgoncalvs/Curriculo-React/715396ac161438cf7b165cfd350384e6f0d606da/src/assets/conhecimentos/'
+    
     return(
         <section className={styles.formacao}>
             <div className={styles.formacao__academica}>
@@ -15,12 +17,15 @@ export default function Formacao () {
             </div>
 
             <div className={styles.formacao__conhecimentos}>
-                {conhecimentos.map(resposta => (
-                    <div>
-                        <img src={`${resposta.img}`} alt="" />
-                        <p>{resposta.title}</p>
-                    </div>
-                ))}
+                <h1>Conhecimentos</h1>
+                <div className={styles.formacao__conhecimentos__itens}>
+                    {conhecimentos.map(resposta => (
+                        <div>
+                            <img src={`${imgURL}${resposta.img}`} alt={resposta.title}/>
+                            <p>{resposta.title}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     )
