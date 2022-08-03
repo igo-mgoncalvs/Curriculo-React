@@ -1,0 +1,10 @@
+@import '/src/styles/variaveis';
+
+.curriculo{
+    display: flex;
+    &__complementos {
+        width: 50vw;
+        height: 100vh;
+        background-color: $fundoComplementos;
+    }
+}
