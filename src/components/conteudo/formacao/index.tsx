@@ -20,7 +20,7 @@ export default function Formacao () {
                 <h1>Conhecimentos</h1>
                 <div className={styles.formacao__conhecimentos__itens}>
                     {conhecimentos.map(resposta => (
-                        <div>
+                        <div key={resposta.title}>
                             <img src={`${imgURL}${resposta.img}`} alt={resposta.title}/>
                             <p>{resposta.title}</p>
                         </div>
