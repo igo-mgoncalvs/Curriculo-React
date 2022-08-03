@@ -1,0 +1,19 @@
+.contato {
+    margin-top: 3rem;
+
+    &__enderecos {
+        border: solid #87ece6c9;
+        border-width: 0 0 3px 0;
+        margin-bottom: 20px;
+    }
+
+    &__redes {
+        display: flex;
+        justify-content: center;
+    
+        & li img {
+            margin: 0 10px;
+            width: 60px;
+        }
+    }
+}
