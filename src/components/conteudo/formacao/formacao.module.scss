@@ -1,0 +1,22 @@
+.formacao {
+    
+    &__academica{
+        
+        & h1 {
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        & li {
+            list-style-type: disc;
+        }
+
+        & p {
+            margin: 8px 0;
+        }
+    }
+
+    &__conhecimentos{
+
+    }
+}

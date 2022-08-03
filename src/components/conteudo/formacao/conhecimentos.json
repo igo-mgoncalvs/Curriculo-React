@@ -1,0 +1,42 @@
+[
+    {
+        "title": "HTML 5",
+        "img": "assets/conhecimentos/html5.svg" 
+    },
+    {
+        "title": "CSS 3",
+        "img": "assets/conhecimentos/css3.svg" 
+    },
+    {
+        "title": "JavaScript",
+        "img": "assets/conhecimentos/javascript.svg" 
+    },
+    {
+        "title": "TypeScript",
+        "img": "assets/conhecimentos/typescript.svg" 
+    },
+    {
+        "title": "Node.js",
+        "img": "assets/conhecimentos/node.svg" 
+    },
+    {
+        "title": "SASS",
+        "img": "assets/conhecimentos/SASS.svg" 
+    },
+    {
+        "title": "GitHub",
+        "img": "assets/conhecimentos/github.svg" 
+    },
+    {
+        "title": "Git",
+        "img": "assets/conhecimentos/html5.svg" 
+    },
+    {
+        "title": "Figma",
+        "img": "assets/conhecimentos/figma.svg" 
+    },
+    {
+        "title": "Trello",
+        "img": "assets/conhecimentos/trello.svg" 
+    }
+]

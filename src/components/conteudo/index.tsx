@@ -1,3 +1,6 @@
+import Formacao from "./formacao"
+import styles from './conteudo.module.scss'
+
 type Props = {
     id: number
 }
@@ -5,10 +8,8 @@ type Props = {
 export default function Conteudo (id: Props) {
 
     return (
-        <>
-            <div>
-                o
-            </div>
-        </>
+        <section className={styles.conteudo}>
+            <Formacao/>
+        </section>
     )
 }
