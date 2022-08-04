@@ -6,17 +6,27 @@ import styles from './portfolio.module.scss'
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
+interface Props {
+    id: number
+}
+
 export default function Portfolio () {
+    const [reposGeral, setReposGeral] = useState<IRepos[]>([])
     const [repos, setRepos] = useState<IRepos[]>([])
-    const [scrollX, setScrollX] = useState(-400)
+    const [scrollX, setScrollX] = useState(0)
     const [id, setId] = useState(0)
     
     useEffect(() => {
         axios.get('https://api.github.com/users/igo-mgoncalvs/repos')
-            .then(resposta => {
-                setRepos(resposta.data)
-            })
-    }, [])
+        .then(resposta => {
+           setReposGeral(resposta.data)
+        })
+    },[])
+
+    useEffect(() => {
+        const filtroRepos = reposGeral.filter(repos => repos.fork === false)
+        setRepos(filtroRepos)
+    }, [reposGeral])
 
     function moveListaDireitia () {
         let x = scrollX + Math.round(window.innerWidth / 3)
@@ -28,7 +38,7 @@ export default function Portfolio () {
 
     function moveListaEsquerda () {
         let x = scrollX - Math.round(window.innerWidth / 3)
-        let listW = repos.length * 234.8;
+        let listW = repos.length * 224;
         if((window.innerWidth - listW) > x) {
             x = (window.innerWidth - listW) - 60;
         }
@@ -48,7 +58,7 @@ export default function Portfolio () {
             <div className={styles.portfolio__repositorios} style={{marginLeft: `${scrollX}px`}}>
                 <div className={styles.portfolio__repositorios__lista}>
                     {repos.map((resposta, key) => (
-                        <div className={styles.portfolio__repositorios__item} onClick={() => setId(key)}>
+                        <div key={key} className={styles.portfolio__repositorios__item} onClick={() => setId(key)}>
                             <p className={styles.portfolio__repositorios__item__nome}>{resposta.name}</p>
                             <div 
                                 key={key}

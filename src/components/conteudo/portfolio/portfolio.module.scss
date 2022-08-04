@@ -25,6 +25,10 @@
             }
         }
 
+        &__item:hover{
+            cursor: pointer;
+        }
+
     }
 
     &__descricao{
@@ -59,6 +63,7 @@
 
 .portfolio:hover .navigateBefore,
 .portfolio:hover .navigateNext {
+    cursor: pointer;
     transition: 0.2s;
     opacity: 1;
 }

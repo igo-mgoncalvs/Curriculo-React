@@ -3,14 +3,38 @@
     justify-content: space-around;
     border: solid #ccc;
     border-width: 0 0 1px 0;
+    overflow-x: hidden;
 
-    & li {
+    &__item {
         display: flex;
+        color: #8A8A8A;
         align-items: center;
         margin: 20px 0 10px 0;
+        height: 27px;
+
 
         & a {
             margin-left: 15px;
         }
     }
+
+    &__item:hover {
+        cursor: pointer;
+        color: #fff;
+        transition: 0.2s;
+    }
+}
+
+.menus:focus{
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+}
+
+.ativo {
+    color: #fff;  
+}
+
+.disable{
+    z-index: -1;
 }
