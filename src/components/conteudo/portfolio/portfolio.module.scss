@@ -1,34 +1,64 @@
 .portfolio{
-    display: flex;
-    overflow-x: hidden;
-    height: 90vh;
 
-    &__repositorios{
-        display: block;
-        height: 150px;
-        margin: 0 10px;
-
-        &__nome{
-            text-align: center;
-            font-weight: bold;
+    &__repositorios {
+        overflow-x: hidden;
+        transition: all ease 0.5s;
+        
+        &__lista {
+            display: flex;
+            width: 9999px;
+            margin-left: 27px;
         }
 
-        & div{
-            margin: 6rem 0 0 3rem;
-
-            & p {
-                overflow-wrap: break-word;
+        &__item{
+            display: flex;
+            flex-direction: column;
+            margin: 0 10px;
+    
+            &__nome{
                 width: 150px;
-                margin: 0;
-                background-color: rgb(233, 164, 108);
+                height: 32px;
+                text-align: center;
+                overflow-wrap: break-word;
+                vertical-align: baseline;
+                font-weight: bold;
             }
         }
+
     }
 
-    &__repositorios:hover{
-        & div {
-            transition: all 0.5s;
-            margin: 0;
+    &__descricao{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        & p {
+            text-align: center;
+            width: 500px
         }
     }
+
+}
+
+.navigateBefore, .navigateNext{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 215px;
+    opacity: 0;
+}
+
+.navigateBefore{
+    background-image: linear-gradient(to right, #1010107a, rgba(0, 0, 0, 0));
+}
+
+.navigateNext{
+    right: 0;
+    background-image: linear-gradient(to left, #1010107a, rgba(0, 0, 0, 0));
+}
+
+.portfolio:hover .navigateBefore,
+.portfolio:hover .navigateNext {
+    transition: 0.2s;
+    opacity: 1;
 }
