@@ -40,7 +40,7 @@ export default function Portfolio () {
         let x = scrollX - Math.round(window.innerWidth / 3)
         let listW = repos.length * 224;
         if((window.innerWidth - listW) > x) {
-            x = (window.innerWidth - listW) - 60;
+            x = (window.innerWidth - listW) - 350;
         }
         setScrollX(x)
     }
@@ -63,7 +63,8 @@ export default function Portfolio () {
                             <div 
                                 key={key}
                                 style={{
-                                    backgroundImage: 'url(https://github.com/igo-mgoncalvs/Aluroni/blob/master/src/assets/ImagensReadme/Inicio.png?raw=true)',
+                                    backgroundImage: `url(./assets/portfolio/${resposta.name}.png)`,
+                                    backgroundPositionY: 'center',
                                     backgroundSize:'150px',
                                     backgroundRepeat: 'no-repeat',
                                     width: '150px',
