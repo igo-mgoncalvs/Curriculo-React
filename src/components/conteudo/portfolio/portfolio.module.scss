@@ -1,21 +1,21 @@
-.portfolio{
+.portfolio {
 
     &__repositorios {
         overflow-x: hidden;
         transition: all ease 0.5s;
-        
+
         &__lista {
             display: flex;
             width: 9999px;
             margin-left: 27px;
         }
 
-        &__item{
+        &__item {
             display: flex;
             flex-direction: column;
             margin: 0 10px;
-    
-            &__nome{
+
+            &__nome {
                 width: 150px;
                 height: 32px;
                 text-align: center;
@@ -25,17 +25,45 @@
             }
         }
 
-        &__item:hover{
+        &__item:hover {
             cursor: pointer;
         }
 
+        &__img {
+            background-color: #4cb0bf4d;
+            width: 165px;
+            border-radius: 5px;
+            background-position: center;
+            background-size: 150px;
+            background-repeat: no-repeat;
+            height: 175px;
+
+            &Ativa {
+                background-color: #4cafbf;
+                box-shadow: inset 1px 0 0 rgb(255 255 255 / 20%), 
+                        inset -1px 0 0 rgb(255 255 255 / 22%), 
+                        0 0 4px 0 rgb(95 99 104), 
+                        0 0 6px 2px rgb(95 99 104);
+            }
+        }
+
+        &__img:hover{
+            cursor: pointer;
+            background-color: #4cafbf;
+            transition: 0.2s;
+            box-shadow: inset 1px 0 0 rgb(255 255 255 / 20%), 
+                        inset -1px 0 0 rgb(255 255 255 / 22%), 
+                        0 0 4px 0 rgb(95 99 104), 
+                        0 0 6px 2px rgb(95 99 104);
+        }
     }
 
-    &__descricao{
+    &__descricao {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         & p {
             text-align: center;
             width: 500px
@@ -44,11 +72,12 @@
 
 }
 
-.navigateBefore, .navigateNext{
+.navigateBefore,
+.navigateNext {
     display: flex;
     align-items: center;
     position: absolute;
-    height: 215px;
+    height: 250px;
     opacity: 0;
 }
 
@@ -56,7 +85,7 @@
     background-image: linear-gradient(to right, #1010107a, rgba(0, 0, 0, 0));
 }
 
-.navigateNext{
+.navigateNext {
     right: 0;
     background-image: linear-gradient(to left, #1010107a, rgba(0, 0, 0, 0));
 }

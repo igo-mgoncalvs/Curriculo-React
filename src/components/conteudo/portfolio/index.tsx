@@ -5,6 +5,7 @@ import { useState } from 'react'
 import styles from './portfolio.module.scss'
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import classNames from 'classnames'
 
 interface Props {
     id: number
@@ -29,7 +30,7 @@ export default function Portfolio () {
     }, [reposGeral])
 
     function moveListaDireitia () {
-        let x = scrollX + Math.round(window.innerWidth / 3)
+        let x = scrollX + Math.round(window.innerWidth / 2)
         if(x > 0) {
             x = 0 
         }
@@ -40,7 +41,7 @@ export default function Portfolio () {
         let x = scrollX - Math.round(window.innerWidth / 3)
         let listW = repos.length * 224;
         if((window.innerWidth - listW) > x) {
-            x = (window.innerWidth - listW) - 350;
+            x = (window.innerWidth - listW) - 450;
         }
         setScrollX(x)
     }
@@ -64,12 +65,11 @@ export default function Portfolio () {
                                 key={key}
                                 style={{
                                     backgroundImage: `url(./assets/portfolio/${resposta.name}.png)`,
-                                    backgroundPositionY: 'center',
-                                    backgroundSize:'150px',
-                                    backgroundRepeat: 'no-repeat',
-                                    width: '150px',
-                                    height:'150px'
                                 }}
+                                className={classNames({
+                                    [styles.portfolio__repositorios__img]:true,
+                                    [styles.portfolio__repositorios__imgAtiva]: repos[id].id? repos[id].id === resposta.id: false
+                                })}                                
                             >
                             </div>
                         </div>
