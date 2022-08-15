@@ -101,5 +101,17 @@
 @media screen and (max-width: 425px) {
     .portfolio{
         z-index: 100;
+
+        &__descricao {
+    
+            & p {
+                width: 75vw;
+            }
+        }
+    }
+
+    .navigateBefore,
+    .navigateNext{
+        opacity: 1;
     }
 }
