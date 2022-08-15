@@ -9,3 +9,15 @@
         width: 55vh;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .home img {
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .home{
+        display: none;
+    }
+}

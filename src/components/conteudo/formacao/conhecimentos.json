@@ -1,42 +1,46 @@
 [
     {
         "title": "HTML 5",
-        "img": "html5.svg"
+        "img": "assets/conhecimentos/html5.svg"
     },
     {
         "title": "CSS 3",
-        "img": "css3.svg"
+        "img": "assets/conhecimentos/css3.svg"
     },
     {
         "title": "JavaScript",
-        "img": "javascript.svg" 
+        "img": "assets/conhecimentos/javascript.svg" 
     },
     {
         "title": "TypeScript",
-        "img": "typescript.svg" 
+        "img": "assets/conhecimentos/typescript.svg" 
     },
     {
         "title": "Node.js",
-        "img": "node.svg" 
+        "img": "assets/conhecimentos/node.svg" 
     },
     {
         "title": "SASS",
-        "img": "SASS.svg" 
+        "img": "assets/conhecimentos/SASS.svg" 
     },
     {
         "title": "GitHub",
-        "img": "github.svg" 
+        "img": "assets/conhecimentos/github.svg" 
     },
     {
         "title": "Git",
-        "img": "html5.svg" 
+        "img": "assets/conhecimentos/html5.svg" 
     },
     {
         "title": "Figma",
-        "img": "figma.svg" 
+        "img": "assets/conhecimentos/figma.svg" 
     },
     {
         "title": "Trello",
-        "img": "trello.svg" 
+        "img": "assets/conhecimentos/trello.svg" 
+    },
+    {
+        "title": "Docker",
+        "img": "assets/conhecimentos/docker.svg" 
     }
 ]

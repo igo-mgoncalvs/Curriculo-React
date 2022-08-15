@@ -8,3 +8,12 @@
         background-color: $fundoComplementos;
     }
 }
+
+@media screen and (max-width: 425px) {
+    .curriculo{
+        &__complementos{
+            position: absolute;
+            width: 100vw;
+        }
+    }
+}

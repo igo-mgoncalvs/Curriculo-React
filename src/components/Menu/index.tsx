@@ -1,12 +1,23 @@
 import styles from './Menu.module.scss'
 import GitHub from 'assets/Redes/github.svg';
 import Linkeding from 'assets/Redes/linkeding.svg';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Conteudo from 'components/conteudo';
 import classNames from 'classnames';
+import styleSobreMim from 'components/sobreMim/sobreMim.module.scss'
 
 export default function Menu () {
     const [idMenu, setIdMenu] = useState(Number)
+
+    useEffect(() => {
+        const sobreMim = document.querySelector('[data-sobreMim]')
+        if(window.innerWidth <= 425 && idMenu > 0){
+            sobreMim?.classList.add(`${styleSobreMim.disable}`)
+            console.log(sobreMim?.classList)
+        }else{
+            sobreMim?.classList.remove(`${styleSobreMim.disable}`)
+        }
+    }, [idMenu])
 
     return (
         <>

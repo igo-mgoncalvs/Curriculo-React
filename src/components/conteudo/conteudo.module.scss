@@ -6,3 +6,15 @@
     display: flex;
     justify-content: center;
 }
+
+@media screen and (max-width:768px) {
+    .flex{
+        display: block;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .flex, .block{
+        margin-top: 70px;
+    }
+}

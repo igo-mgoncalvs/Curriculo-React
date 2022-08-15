@@ -1,4 +1,6 @@
 .formacao {
+    display: flex;
+    flex-direction: column;
     
     &__academica{
         
@@ -40,6 +42,34 @@
 
                 & img {
                     width: 60px;
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .formacao{
+        &__academica{
+
+            & li {
+                font-size: 0.8rem;
+                margin: 0 3rem;
+            }
+        }
+
+        &__conhecimentos{
+            &__itens{
+                width: 22rem;
+                & div {
+                    width: 70px;
+                    & img{
+                        width: 40px;
+                    }
+                    & p {
+                        font-size: 0.8rem;
+                    }
                 }
             }
         }

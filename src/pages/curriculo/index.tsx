@@ -3,6 +3,7 @@ import SobreMim from "components/sobreMim";
 import styles from "./curriculo.module.scss"
 
 export default function Curriculo () {
+
     return (
         <section className={styles.curriculo}>
             <SobreMim />

@@ -10,7 +10,11 @@
     height: 100vh;
 
     &__box{
-        width: 25rem;
+        width: 25vw;
+
+        & h1 {
+            font-size: 2rem;
+        }
 
         & p {
             margin-top: 10px;
@@ -20,6 +24,10 @@
             font-weight: bold;
         }
     }
+}
+
+.disable{
+    display: none;
 }
 
 .blinkingCursor{
@@ -35,4 +43,23 @@
     50% {
       color: var(--branco)
     }
-  }
+}
+
+@media screen and (max-width: 768px) {
+    .sobreMim{
+
+        &__box{
+            width: 20rem;
+
+            & h1 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .sobreMim {
+        width: 100vw;
+    }
+}

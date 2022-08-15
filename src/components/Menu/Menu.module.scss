@@ -38,3 +38,24 @@
 .disable{
     z-index: -1;
 }
+
+@media screen and (max-width: 768px) {
+    .menus{
+        &__item{
+            font-size: 0.8rem;
+
+            & a img {
+                width: 1.2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .menus{
+        position: absolute;
+        width: 100vw;
+        left: 0;
+        z-index: 100;
+    }
+}
